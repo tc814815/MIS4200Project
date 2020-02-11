@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<div class="jumbotron">
+    <h1>MIS4200</h1>
+    <p class="lead">Senior level class in the MIS major offered at Ohio University, class info located at the link below.</p>
+    <p><a href="https://ohiocoblms.azurewebsites.net/learn/forumMainPage.aspx?f=8343" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>OU College of Business</h2>
+        <p>
+            For More information Click  "Learn More""
+        </p>
+        <p><a class="btn btn-default" href="https://business.ohio.edu/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>MVC</h2>
+        <p>
+
+            @Html.ActionLink("Customers", "Index", "Customers") <br />
+            @Html.ActionLink("Patients", "Index", "Patients") <br />
+            @Html.ActionLink("Doctors", "Index", "Doctors") <br />
+
+            @Html.ActionLink("Orders", "Index", "Orders") <br />
+
+            @Html.ActionLink("Order Details", "Index", "OrderDetail") <br />
+            @Html.ActionLink("Products", "Index", "Products") <br />
+            @Html.ActionLink("Appointment", "Index", "Appointments")
+        </p>
+        <p></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Handshake Profile</h2>
+        <p>Check out my Handshake profile to learn about me.</p>
+        <p><a class="btn btn-default" href="https://app.joinhandshake.com/users/9280124">Learn more &raquo;</a></p>
+    </div>
+</div>
