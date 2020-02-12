@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MIS4200Project.Content;
+using MIS4200Project.DAL;
 using MIS4200Project.Models;
 
 namespace MIS4200Project.Controllers

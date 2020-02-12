@@ -6,7 +6,7 @@ using MIS4200Project.Models; // This is needed to access the models
 using System.Data.Entity; // this is needed to access the DbContext object
 
 
-namespace MIS4200Project.Content
+namespace MIS4200Project.DAL
 {
     public class MIS4200Context : DbContext
     {
