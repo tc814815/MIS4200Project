@@ -11,10 +11,25 @@ namespace MIS4200Project.Models
         
         [Key]
         public int doctorID { get; set; }
+        [Display(Name ="First Name")]
+        [Required(ErrorMessage ="First Name is Required")]
+        [StringLength(30)]
         public string firstName { get; set; }
+        [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "Last Name is Required")]
+        [StringLength(30)]
         public string lastName { get; set; }
+        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Enter your most frequently used Email address")]
+        [StringLength(30)]
         public string email { get; set; }
+        
+        [Display(Name = "Mobile Phone Number")]
+        [DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage = "Phone Number is Required")]
         public string phone { get; set; }
+
+        [Display(Name = "How many years of experience do you have as Doctor?")]
         public DateTime doctorSince { get; set; }
         // add any other fields as appropriate
         // a customer can have any number of orders, a 1:M relationship,
