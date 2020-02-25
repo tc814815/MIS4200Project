@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using MIS4200Project.Models; // This is needed to access the models
 using System.Data.Entity; // this is needed to access the DbContext object
-
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace MIS4200Project.DAL
 {
