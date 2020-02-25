@@ -10,7 +10,7 @@ namespace MIS4200Project.DAL
 {
     public class MIS4200Context : DbContext
     {
-        public MIS4200Context() : base ("name=DefaultConnection")
+        public MIS4200Context() : base("name=DefaultConnection")
         {
             // this method is a 'constructor' and is called when a new context is created
             // the base attribute says which connection string to use
@@ -26,7 +26,12 @@ namespace MIS4200Project.DAL
         public DbSet<Patient> Patients { get; set; }
 
         public DbSet<Doctor> Doctors { get; set; }
-
+      
         public System.Data.Entity.DbSet<MIS4200Project.Models.Appointment> Appointments { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
     }
+   
 }
