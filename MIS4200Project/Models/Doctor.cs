@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace MIS4200Project.Models
 {
     public class Doctor
     {
-        
+        public System.Guid SID { get; set; }
+
         [Key]
         public int doctorID { get; set; }
-        [Display(Name ="First Name")]
+        [Display(Name ="Doctor First Name")]
         [Required(ErrorMessage ="First Name is Required")]
         [StringLength(30)]
         public string firstName { get; set; }
-        [Display(Name = "Last Name")]
+        [Display(Name = "Doctor Last Name")]
         [Required(ErrorMessage = "Last Name is Required")]
         [StringLength(30)]
         public string lastName { get; set; }
@@ -29,7 +31,7 @@ namespace MIS4200Project.Models
         [Required(ErrorMessage = "Phone Number is Required")]
         public string phone { get; set; }
 
-        [Display(Name = "How many years of experience do you have as Doctor?")]
+        [Display(Name = "When were you certified as a doctor?")]
         public DateTime doctorSince { get; set; }
         // add any other fields as appropriate
         // a customer can have any number of orders, a 1:M relationship,

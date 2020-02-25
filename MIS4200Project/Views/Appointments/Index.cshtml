@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Appointments Home</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered table-hover table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Doctor.firstName)
@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.apoointmentDescription)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.patietntD)
+            @Html.DisplayNameFor(model => model.patietntID)
         </th>
         <th></th>
     </tr>
@@ -38,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.apoointmentDescription)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.patietntD)
+            @Html.DisplayFor(modelItem => item.patietntID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.appointmentID }) |
